@@ -5,7 +5,9 @@
   "projects": {
     "angular-whats-live": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -25,9 +27,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/assets/styles"
+              ]
+            } 
           },
           "configurations": {
             "production": {
@@ -84,12 +91,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
